@@ -1,0 +1,21 @@
+{
+  "name": "ticket-tracker-mern",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces",
+    "start": "npm --prefix server run start",
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client start\"",
+    "lint": "echo \"no lint configured\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
